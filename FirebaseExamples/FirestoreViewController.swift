@@ -91,7 +91,7 @@ class FirestoreViewController: UIViewController {
     @IBAction func getDataPressed(_ sender: Any) {
         print("Get Data pressed!")
         
-        db.collection("songs").getDocuments() {
+        db.collection("employees").getDocuments() {
             (querySnapshot, err) in
             
             // MARK: FB - Boilerplate code to get data from Firestore
@@ -122,7 +122,7 @@ class FirestoreViewController: UIViewController {
         */
         
         // dyanmic
-        let songsRef = db.collection("songs").whereField("artist", isEqualTo: artistName)
+        let songsRef = db.collection("employees").whereField("Name", isEqualTo: artistName)
         
         print("Querying database")
         
